@@ -13,6 +13,9 @@
 		05350B5C231F02710094EB97 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05350B5B231F02710094EB97 /* Assets.xcassets */; };
 		05350B5F231F02710094EB97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05350B5D231F02710094EB97 /* LaunchScreen.storyboard */; };
 		05350B67231F076A0094EB97 /* SearchResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05350B66231F076A0094EB97 /* SearchResultsTableViewController.swift */; };
+		05350B6C231F0BEA0094EB97 /* SearchResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05350B6B231F0BEA0094EB97 /* SearchResults.swift */; };
+		05350B6E231F0C0A0094EB97 /* ResultType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05350B6D231F0C0A0094EB97 /* ResultType.swift */; };
+		05350B70231F1FA30094EB97 /* SearchResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05350B6F231F1FA30094EB97 /* SearchResultController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		05350B5E231F02710094EB97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		05350B60231F02710094EB97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		05350B66231F076A0094EB97 /* SearchResultsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsTableViewController.swift; sourceTree = "<group>"; };
+		05350B6B231F0BEA0094EB97 /* SearchResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResults.swift; sourceTree = "<group>"; };
+		05350B6D231F0C0A0094EB97 /* ResultType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultType.swift; sourceTree = "<group>"; };
+		05350B6F231F1FA30094EB97 /* SearchResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,7 +47,6 @@
 			isa = PBXGroup;
 			children = (
 				05350B53231F026F0094EB97 /* iTunesSearch */,
-				05350B52231F026F0094EB97 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -51,20 +56,49 @@
 				05350B51231F026F0094EB97 /* iTunesSearch.app */,
 			);
 			name = Products;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		05350B53231F026F0094EB97 /* iTunesSearch */ = {
 			isa = PBXGroup;
 			children = (
-				05350B54231F026F0094EB97 /* AppDelegate.swift */,
-				05350B56231F026F0094EB97 /* ViewController.swift */,
-				05350B58231F026F0094EB97 /* Main.storyboard */,
-				05350B5B231F02710094EB97 /* Assets.xcassets */,
-				05350B5D231F02710094EB97 /* LaunchScreen.storyboard */,
-				05350B60231F02710094EB97 /* Info.plist */,
-				05350B66231F076A0094EB97 /* SearchResultsTableViewController.swift */,
+				05350B68231F0AAD0094EB97 /* Model */,
+				05350B69231F0AC40094EB97 /* View Controllers */,
+				05350B6A231F0AE30094EB97 /* Resources */,
 			);
 			path = iTunesSearch;
+			sourceTree = "<group>";
+		};
+		05350B68231F0AAD0094EB97 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				05350B6B231F0BEA0094EB97 /* SearchResults.swift */,
+				05350B6D231F0C0A0094EB97 /* ResultType.swift */,
+				05350B6F231F1FA30094EB97 /* SearchResultController.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		05350B69231F0AC40094EB97 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				05350B56231F026F0094EB97 /* ViewController.swift */,
+				05350B66231F076A0094EB97 /* SearchResultsTableViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		05350B6A231F0AE30094EB97 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				05350B52231F026F0094EB97 /* Products */,
+				05350B54231F026F0094EB97 /* AppDelegate.swift */,
+				05350B58231F026F0094EB97 /* Main.storyboard */,
+				05350B5B231F02710094EB97 /* Assets.xcassets */,
+				05350B60231F02710094EB97 /* Info.plist */,
+				05350B5D231F02710094EB97 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +172,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05350B70231F1FA30094EB97 /* SearchResultController.swift in Sources */,
 				05350B57231F026F0094EB97 /* ViewController.swift in Sources */,
 				05350B55231F026F0094EB97 /* AppDelegate.swift in Sources */,
 				05350B67231F076A0094EB97 /* SearchResultsTableViewController.swift in Sources */,
+				05350B6E231F0C0A0094EB97 /* ResultType.swift in Sources */,
+				05350B6C231F0BEA0094EB97 /* SearchResults.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,7 +324,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = iTunesSearch/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/iTunesSearch/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,7 +341,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = iTunesSearch/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/iTunesSearch/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
